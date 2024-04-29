@@ -1,0 +1,28 @@
+openapi: 3.0.3
+components:
+  schemas:
+    Link:
+      description: >-
+        Link between the Ports.
+      type: object
+      required: [src, dst]
+      properties:
+        src:
+          description: >-
+            Src for the link.
+          type: string
+          x-field-uid: 1
+        dst:
+          description: >-
+            Dst of the link.
+          type: string
+          x-field-uid: 2
+        mode:
+          type: string
+          x-field-uid: 3
+          default: bidirectional
+          x-enum:
+            unidirectional:
+              x-field-uid: 1
+            bidirectional:
+              x-field-uid: 2

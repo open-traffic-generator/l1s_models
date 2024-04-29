@@ -1,0 +1,25 @@
+paths:
+  /config:
+    post:
+      tags: ['Configuration']
+      operationId: set_config
+      description: >-
+        Create configuration for L1S
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '../config/config.yaml#/components/schemas/Config'
+      responses:
+        '200':
+          description: >-
+            Return response from the l1s.
+          content:
+            application/json:
+              schema:
+                type: string
+          x-field-uid: 1
+        default:
+          $ref: '../result/request.yaml#/components/responses/Failure'
+          x-field-uid: 2

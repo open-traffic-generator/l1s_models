@@ -1,0 +1,14 @@
+components:
+  schemas:
+    Config:
+      description: |-
+        A container for L1S configuration.
+      type: object
+      properties:
+        links:
+          description: |-
+            Connection between ports within a switch.
+          type: array
+          items:
+            $ref: '../link/link.yaml#/components/schemas/Link'
+          x-field-uid: 1

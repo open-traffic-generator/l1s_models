@@ -1,2 +1,2 @@
-openapiart==0.3.4
+openapiart==0.3.13
 semantic_version

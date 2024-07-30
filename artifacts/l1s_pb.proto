@@ -16,6 +16,17 @@ message Config {
 
   // Connection between ports within a switch.
   repeated Link links = 1;
+
+  message Operation {
+    enum Enum {
+      unspecified = 0;
+      CREATE = 1;
+      DELETE = 2;
+    }
+  }
+  // Operation to Create or Delete Links
+  // default = Operation.Enum.create
+  optional Operation.Enum operation = 2;
 }
 
 // Link between the Ports.

@@ -12,3 +12,14 @@ components:
           items:
             $ref: '../link/link.yaml#/components/schemas/Link'
           x-field-uid: 1
+        operation:
+          description: |-
+            Operation to Create or Delete Links
+          type: string
+          x-field-uid: 2
+          default: CREATE
+          x-enum:
+            CREATE:
+              x-field-uid: 1
+            DELETE:
+              x-field-uid: 2
